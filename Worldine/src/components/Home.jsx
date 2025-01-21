@@ -1,42 +1,20 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material';
 import TextPressure from "./../Animations/TextAnimations/TextPressure/TextPressure.jsx"
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import DecayCard from './../Animations/Components/DecayCard/DecayCard.jsx';
+import Country from './Country.jsx';
+import { useWindowScroll } from "@reactuses/core";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const Home = () => {
 
-
     const char = "Scroll down to explore".split("")
 
-    useLayoutEffect(() => {
-        const tl = gsap.timeline();
-
-        tl.fromTo(
-            ".letter",
-            { scale: "1" },
-            {
-                scale: "1.5",
-                duration: 0.5,
-                ease: "sine.in",
-                stagger: { each: 0.1 },
-            }
-        );
-        tl.to(
-            ".letter",
-            {
-                scale: "1",
-                duration: 0.5,
-                ease: "sine.in",
-                stagger: { each: 0.1 },
-            },
-            ">" // Start second animation immediately after the first
-        );
-    }, []);
 
     return (
         <>
@@ -102,9 +80,31 @@ const Home = () => {
                     </Box>
                 </Box>
                 <Box className="Section-2"
-
+                    sx={{
+                        display: "flex",
+                        minHeight: "100vh",
+                        width: "100%",
+                    }}
                 >
-
+                    <Country Link="new-zealand.png" Name="NEW ZEALAND" />
+                </Box>
+                <Box className="Section-3"
+                    sx={{
+                        display: "flex",
+                        minHeight: "100vh",
+                        width: "100%",
+                    }}
+                >
+                    <Country Link="new-zealand.png" Name="JAPAN" />
+                </Box>
+                <Box className="Section-3"
+                    sx={{
+                        display: "flex",
+                        minHeight: "100vh",
+                        width: "100%",
+                    }}
+                >
+                    <Country Link="new-zealand.png" Name="INDIA" />
                 </Box>
             </Box>
         </>

@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.14.0",
     "@gsap/react": "^2.1.2",
     "@mui/material": "^6.4.0",
+    "@reactuses/core": "^6.0.1",
     "gsap": "^3.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -28,6 +29,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "sass-embedded": "^1.83.4",
     "vite": "^6.0.5"
   }
 }
