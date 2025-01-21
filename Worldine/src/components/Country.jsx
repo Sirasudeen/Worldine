@@ -2,8 +2,13 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import DecayCard from '../Animations/Components/DecayCard/DecayCard'
 import TextPressure from '../Animations/TextAnimations/TextPressure/TextPressure'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/src/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
 const Country = ({ Link, Name }) => {
+
     return (
         <Box
             sx={{
@@ -16,6 +21,7 @@ const Country = ({ Link, Name }) => {
             }}
         >
             <Box
+                className="content"
                 sx={{
                     display: 'flex',
                     flexDirection: "column",
