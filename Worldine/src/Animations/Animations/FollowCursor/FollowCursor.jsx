@@ -1,7 +1,7 @@
 /*
-	jsrepo 1.28.1
-	Installed from https://reactbits.dev/default/
-	21-1-2025
+  jsrepo 1.28.1
+  Installed from https://reactbits.dev/default/
+  21-1-2025
 */
 
 import { useRef, useEffect } from "react";

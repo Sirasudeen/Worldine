@@ -10,8 +10,8 @@
 
 .svg {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: clamp(2rem, 2rem + 40vw, 30rem);
+  height: clamp(2rem, 2rem + 40vw, 30rem);
   display: block;
   will-change: transform;
 }
