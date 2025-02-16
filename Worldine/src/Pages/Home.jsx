@@ -88,7 +88,8 @@ const Home = () => {
                     sx={{
                         display: "flex",
                         minHeight: "100vh",
-                        width: "100%",
+                        width: "100vW",
+                        overflow: "hidden",
                         flexDirection: "column",
                         justifyContent: "space-between",
                     }}
@@ -152,7 +153,7 @@ const Home = () => {
                         width: "100%",
                     }}
                 >
-                    <FollowCursor />
+                    <FollowCursor offsetX={0} />
 
                     <Country Name="NEW ZEALAND" Link="new-zealand.png" />
                 </Box>
@@ -163,7 +164,6 @@ const Home = () => {
                         minHeight: "100vh",
                         width: "100%",
                     }}>
-                    <FollowCursor />
 
                     <Country Link="switzerland.png" Name="SWITZERLAND" />
 
@@ -177,7 +177,6 @@ const Home = () => {
                         minHeight: "100vh",
                         width: "100%",
                     }}>
-                    <FollowCursor />
 
                     <Country Link="japan.png" Name="JAPAN" />
 
@@ -191,7 +190,6 @@ const Home = () => {
                         minHeight: "100vh",
                         width: "100%",
                     }}>
-                    <FollowCursor />
 
                     <Country Link="korea.png" Name="SOUTH KOREA" />
 
@@ -204,7 +202,6 @@ const Home = () => {
                         minHeight: "100vh",
                         width: "100%",
                     }}>
-                    <FollowCursor />
 
                     <Country Link="india.png" Name="INDIA" />
 
@@ -217,7 +214,6 @@ const Home = () => {
                         minHeight: "100vh",
                         width: "100%",
                     }}>
-                    <FollowCursor />
 
                     <Country Link="united-states.png" Name="UNITED STATES" />
 

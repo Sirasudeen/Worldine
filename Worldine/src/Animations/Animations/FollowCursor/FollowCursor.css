@@ -1,0 +1,23 @@
+/*
+	jsrepo 1.36.0
+	Installed from https://reactbits.dev/default/
+	16-2-2025
+*/
+
+.card {
+  position: absolute;
+  z-index: 1;
+  width: clamp(20px, 10vw, 100px);
+  height: clamp(20px, 20vh, 100px);
+  background: url("hoverbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 50%;
+  transition:
+    box-shadow 0.5s,
+    opacity 0.5s;
+  will-change: transform;
+  touch-action: none;
+}

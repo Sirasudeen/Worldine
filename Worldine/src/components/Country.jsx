@@ -13,7 +13,7 @@ const Country = ({ Link, Name }) => {
         <Box
             sx={{
                 display: "flex",
-                width: "100%",
+                width: "100vW",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column"
