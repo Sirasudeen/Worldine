@@ -4,8 +4,6 @@ import TextPressure from "../Animations/TextAnimations/TextPressure/TextPressure
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
-import DecayCard from '../Animations/Components/DecayCard/DecayCard.jsx';
-import FollowCursor from '../Animations/Animations/FollowCursor/FollowCursor.jsx'
 
 import Country from '../components/Country.jsx';
 import { useWindowScroll } from "@reactuses/core";
@@ -82,13 +80,16 @@ const Home = () => {
 
     return (
         <>
-            <Box className="outter">
+            <Box className="outter" sx={{
+                width: "100vw",
+                overflow: "hidden"
+            }}>
 
                 <Box className="Section-1 section"
                     sx={{
                         display: "flex",
-                        minHeight: "100vh",
-                        width: "100vW",
+                        height: "100vh",
+                        width: "100vw",
                         overflow: "hidden",
                         flexDirection: "column",
                         justifyContent: "space-between",
@@ -145,24 +146,28 @@ const Home = () => {
                         </Typography>
                     </Box>
                 </Box>
+
                 <Box className="Section-2 section"
                     onClick={() => window.open("https://www.newzealand.com/in/", "_blank", "noopener,noreferrer")}
                     sx={{
                         display: "flex",
-                        minHeight: "100vh",
+                        justifyContent: 'center',
+                        alignItems: "center",
+                        height: "100vh",
                         width: "100%",
                     }}
                 >
-                    <FollowCursor offsetX={0} />
 
                     <Country Name="NEW ZEALAND" Link="new-zealand.png" />
                 </Box>
-                <Box className="Section-4 section"
+                <Box className="Section-3 section"
                     onClick={() => window.open("https://www.myswitzerland.com/en-in/", "_blank", "noopener,noreferrer")}
                     sx={{
                         display: "flex",
-                        minHeight: "100vh",
+                        height: "100vh",
                         width: "100%",
+                        justifyContent: 'center',
+                        alignItems: "center"
                     }}>
 
                     <Country Link="switzerland.png" Name="SWITZERLAND" />
@@ -171,7 +176,7 @@ const Home = () => {
                 <Box
                     onClick={() => window.open("https://www.japan.travel/en/", "_blank", "noopener,noreferrer")}
 
-                    className="Section-5 section"
+                    className="Section-4 section"
                     sx={{
                         display: "flex",
                         minHeight: "100vh",

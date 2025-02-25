@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import DecayCard from '../Animations/Components/DecayCard/DecayCard'
+import TiltedCard from '../Animations/Components/TiltedCard/TiltedCard.jsx';
 import TextPressure from '../Animations/TextAnimations/TextPressure/TextPressure'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -13,7 +13,8 @@ const Country = ({ Link, Name }) => {
         <Box
             sx={{
                 display: "flex",
-                width: "100vW",
+                width: "100vw",
+                height: "100vh",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column"
@@ -27,12 +28,25 @@ const Country = ({ Link, Name }) => {
                     flexDirection: "column",
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop: "10%",
+                    gap: "3vh",
                     width: "50%"
                 }}
             >
-                <DecayCard width={500} height={500} image={Link}>
-                </DecayCard>
+                <TiltedCard
+                    imageSrc={Link}
+                    altText="Click to explore"
+                    captionText="Click to explore"
+                    containerHeight="50vh"
+                    containerWidth="30vw"
+                    imageHeight="50vh"
+                    imageWidth="clamp(4rem,45vw,30rem)"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.1}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={false}
+
+                />
                 <TextPressure
                     text={Name}
                     flex={true}
@@ -43,7 +57,7 @@ const Country = ({ Link, Name }) => {
                     italic={true}
                     textColor="black"
                     strokeColor="white"
-                    minFontSize={60}
+                    minFontSize={40}
                 />
             </Box>
 
